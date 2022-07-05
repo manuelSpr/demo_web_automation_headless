@@ -21,6 +21,7 @@ public class MexicoTest extends DriverConfig {
   @Test()
   public void mexicoCountryTest() throws InterruptedException {
     System.out.println("Mexico");
+    setDriver();
     //assertThat(driver.getTitle()).contains("Selenium WebDriver");
     /*InitialPage initialPage = new InitialPage(driver);
     initialPage.setShared("Mexico");

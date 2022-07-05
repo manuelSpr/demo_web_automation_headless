@@ -18,6 +18,7 @@ public class ColombiaTest extends DriverConfig {
   @Test()
   public void colombiaCountryTest() throws InterruptedException {
     System.out.println("Colombia");
+    setDriver();
   }
     /*InitialPage initialPage = new InitialPage(driver);
     initialPage.setShared("Colombia");
