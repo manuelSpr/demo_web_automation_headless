@@ -30,7 +30,8 @@ public class DriverConfig {
     //driver = WebDriver.Chrome("/usr/lib/chromium");
     */
     //driver = new ChromeDriver(options);
-    driver.get("https://www.google.com/");
+    //driver.get("https://www.google.com/");
+    driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
     return driver;
   }
 }
