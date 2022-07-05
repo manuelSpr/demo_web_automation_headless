@@ -6,13 +6,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.sql.SQLOutput;
+
 public class DriverConfig {
 
   public static WebDriver driver;
   public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
   public static void setDriver(){
+    System.out.println("hola");
     driver = wdm.create();
+    System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     /*ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
