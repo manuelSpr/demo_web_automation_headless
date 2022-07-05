@@ -30,7 +30,7 @@ public class MexicoTest extends DriverConfig {
     SysUtil sysUtil = new SysUtil();
     sysUtil.addScreenshot("Test_Mexico", driver);
     Assert.assertTrue(resultPage.getDescription("País en América del Norte"));*/
-    driver.quit();
+    //driver.quit();
   }
 
 }

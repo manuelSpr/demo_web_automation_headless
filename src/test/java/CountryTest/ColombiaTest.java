@@ -26,7 +26,7 @@ public class ColombiaTest extends DriverConfig {
     SysUtil sysUtil = new SysUtil();
     sysUtil.addScreenshot("Test_Colombia", driver);
     Assert.assertTrue(resultPage.getDescription("País en América del Sur"));*/
-    driver.quit();
+    //driver.quit();
   }
 
 }
