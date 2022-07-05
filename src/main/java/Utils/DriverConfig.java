@@ -9,11 +9,12 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class DriverConfig {
 
   public static WebDriver driver;
+  public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
   public static WebDriver setDriver(){
-    driver = null;
+    driver = wdm.create();
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-    ChromeOptions options = new ChromeOptions();
+    /*ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
     options.setBinary("/usr/bin/chromedriver");
@@ -27,7 +28,8 @@ public class DriverConfig {
     options.addArguments("--disable-dev-shm-usage");
     WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
-    driver = new ChromeDriver(options);
+    */
+    //driver = new ChromeDriver(options);
     driver.get("https://www.google.com/");
     return driver;
   }
