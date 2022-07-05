@@ -15,13 +15,16 @@ public class DriverConfig {
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     ChromeOptions options = new ChromeOptions();
     options.setBinary("/usr/bin/chromedriver");
-    options.addArguments("--headless", "--window-size=1920,1200");
+    //options.addArguments("--headless", "--window-size=1920,1200");
+    options.addArguments("--headless");
+    options.addArguments("start-maximized"); // open Browser in maximized mode
     options.addArguments("--no-sandbox");
+    options.addArguments("disable-infobars"); // disabling infobars
     //options.setHeadless(true);
-    //options.addArguments("--disable-gpu");
-    //options.addArguments("--disable-extensions");
+    options.addArguments("--disable-gpu");
+    options.addArguments("--disable-extensions");
     options.addArguments("--disable-dev-shm-usage");
-    WebDriverManager.chromedriver().setup();
+    //WebDriverManager.chromedriver().setup();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
     driver = new ChromeDriver(options);
     driver.get("https://www.google.com/");
