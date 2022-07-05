@@ -14,11 +14,12 @@ public class DriverConfig {
     driver = null;
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     ChromeOptions options = new ChromeOptions();
-    options.setBinary("/usr/bin/chromedriver");
-    //options.addArguments("--headless", "--window-size=1920,1200");
-    options.addArguments("--headless");
-    options.addArguments("start-maximized"); // open Browser in maximized mode
     options.addArguments("--no-sandbox");
+    options.addArguments("--headless");
+    //options.setBinary("/usr/bin/chromedriver");
+    options.setBinary("/usr/bin/google-chrome");
+    //options.addArguments("--headless", "--window-size=1920,1200");
+    options.addArguments("start-maximized"); // open Browser in maximized mode
     options.addArguments("disable-infobars"); // disabling infobars
     //options.setHeadless(true);
     options.addArguments("--disable-gpu");
