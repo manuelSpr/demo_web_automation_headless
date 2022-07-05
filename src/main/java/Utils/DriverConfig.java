@@ -11,7 +11,7 @@ public class DriverConfig {
   public static WebDriver driver;
   public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
-  public static WebDriver setDriver(){
+  public static void setDriver(){
     driver = wdm.create();
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     /*ChromeOptions options = new ChromeOptions();
@@ -32,6 +32,6 @@ public class DriverConfig {
     //driver = new ChromeDriver(options);
     //driver.get("https://www.google.com/");
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
-    return driver;
+    //return driver;
   }
 }
