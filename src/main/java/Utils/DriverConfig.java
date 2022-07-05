@@ -1,5 +1,7 @@
 package Utils;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,6 +38,7 @@ public class DriverConfig {
     //driver = new ChromeDriver(options);
     //driver.get("https://www.google.com/");
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+    assertThat(driver.getTitle()).contains("Selenium WebDriver");
     //return driver;
   }
 }

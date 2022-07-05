@@ -12,14 +12,15 @@ import org.testng.annotations.Test;
 
 public class MexicoTest extends DriverConfig {
 
-  @BeforeClass(alwaysRun = true)
+  /*@BeforeClass(alwaysRun = true)
   public void beforeC() {
     setDriver();
   }
+*/
 
   @Test()
   public void mexicoCountryTest() throws InterruptedException {
-
+    System.out.println("Mexico");
     //assertThat(driver.getTitle()).contains("Selenium WebDriver");
     /*InitialPage initialPage = new InitialPage(driver);
     initialPage.setShared("Mexico");

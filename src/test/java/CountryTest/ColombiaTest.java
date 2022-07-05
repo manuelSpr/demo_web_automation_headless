@@ -10,13 +10,15 @@ import org.testng.annotations.Test;
 
 public class ColombiaTest extends DriverConfig {
 
-  @BeforeClass(alwaysRun = true)
+  /* @BeforeClass(alwaysRun = true)
   public void beforeC() {
     setDriver();
   }
-
+  */
   @Test()
-  public void mexicoCountryTest() throws InterruptedException {
+  public void colombiaCountryTest() throws InterruptedException {
+    System.out.println("Colombia");
+  }
     /*InitialPage initialPage = new InitialPage(driver);
     initialPage.setShared("Colombia");
     String nameFile = "test" + "Colombia";
@@ -25,8 +27,7 @@ public class ColombiaTest extends DriverConfig {
     Thread.sleep(10);
     SysUtil sysUtil = new SysUtil();
     sysUtil.addScreenshot("Test_Colombia", driver);
-    Assert.assertTrue(resultPage.getDescription("País en América del Sur"));*/
-    //driver.quit();
-  }
 
+    //driver.quit();
+*/
 }
