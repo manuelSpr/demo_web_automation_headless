@@ -25,7 +25,7 @@ public class DriverConfig {
     options.addArguments("--disable-gpu");
     options.addArguments("--disable-extensions");
     options.addArguments("--disable-dev-shm-usage");
-    //WebDriverManager.chromedriver().setup();
+    WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
     driver = new ChromeDriver(options);
     driver.get("https://www.google.com/");
