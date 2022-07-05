@@ -16,8 +16,8 @@ public class DriverConfig {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
-    //options.setBinary("/usr/bin/chromedriver");
-    options.setBinary("/usr/bin/google-chrome");
+    options.setBinary("/usr/bin/chromedriver");
+    //options.setBinary("/usr/bin/google-chrome");
     //options.addArguments("--headless", "--window-size=1920,1200");
     options.addArguments("start-maximized"); // open Browser in maximized mode
     options.addArguments("disable-infobars"); // disabling infobars
