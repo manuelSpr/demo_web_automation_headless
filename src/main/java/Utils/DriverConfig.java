@@ -17,27 +17,26 @@ public class DriverConfig {
 
   public static void setDriver(){
     System.out.println("hola");
-    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
+    //WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
     //driver = new WebDriverManager.chromedriver().browserInDocker();
-    driver = wdm.create();
-    System.out.println("hola a todos");
+    //driver = wdm.create();
+    //System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-    /*ChromeOptions options = new ChromeOptions();
-    options.addArguments("--no-sandbox");
+    ChromeOptions options = new ChromeOptions();
+    //options.addArguments("--no-sandbox");
     options.addArguments("--headless");
+    options.addArguments("--disable-gpu");
     options.setBinary("/usr/bin/chromedriver");
     //options.setBinary("/usr/bin/google-chrome");
     //options.addArguments("--headless", "--window-size=1920,1200");
     options.addArguments("start-maximized"); // open Browser in maximized mode
-    options.addArguments("disable-infobars"); // disabling infobars
+    //options.addArguments("disable-infobars"); // disabling infobars
     //options.setHeadless(true);
-    options.addArguments("--disable-gpu");
-    options.addArguments("--disable-extensions");
-    options.addArguments("--disable-dev-shm-usage");
+    //options.addArguments("--disable-extensions");
+    //options.addArguments("--disable-dev-shm-usage");
     WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
-    */
-    //driver = new ChromeDriver(options);
+    driver = new ChromeDriver(options);
     //driver.get("https://www.google.com/");
     //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
