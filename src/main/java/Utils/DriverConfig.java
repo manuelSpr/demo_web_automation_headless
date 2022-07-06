@@ -22,6 +22,7 @@ public class DriverConfig {
     //driver = wdm.create();
     //System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+    System.setProperty("webdriver.chrome.whitelistedIps", "");
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
