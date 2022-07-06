@@ -23,9 +23,9 @@ public class DriverConfig {
     //System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     ChromeOptions options = new ChromeOptions();
-    //options.addArguments("--no-sandbox");
+    options.addArguments("--no-sandbox");
     options.addArguments("--headless");
-    options.addArguments("--disable-gpu");
+    //options.addArguments("--disable-gpu");
     options.setBinary("/usr/bin/chromedriver");
     //options.setBinary("/usr/bin/google-chrome");
     //options.addArguments("--headless", "--window-size=1920,1200");
@@ -33,7 +33,7 @@ public class DriverConfig {
     //options.addArguments("disable-infobars"); // disabling infobars
     //options.setHeadless(true);
     //options.addArguments("--disable-extensions");
-    //options.addArguments("--disable-dev-shm-usage");
+    options.addArguments("--disable-dev-shm-usage");
     WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
     driver = new ChromeDriver(options);
