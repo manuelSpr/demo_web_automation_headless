@@ -12,14 +12,14 @@ import java.sql.SQLOutput;
 
 public class DriverConfig {
 
-  //public static WebDriver driver;
+  public static WebDriver driver;
   //public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
   public static void setDriver(){
     System.out.println("hola");
     WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
     //driver = new WebDriverManager.chromedriver().browserInDocker();
-    //driver = wdm.create();
+    driver = wdm.create();
     System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     /*ChromeOptions options = new ChromeOptions();
@@ -39,8 +39,8 @@ public class DriverConfig {
     */
     //driver = new ChromeDriver(options);
     //driver.get("https://www.google.com/");
-    wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
-    //driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+    //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
+    driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
     //assertThat(driver.getTitle()).contains("Selenium WebDriver");
     //return driver;
   }
