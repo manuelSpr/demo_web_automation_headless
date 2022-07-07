@@ -26,13 +26,16 @@ public class DriverConfig {
     //driver = wdm.create();
     //System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-    //System.setProperty("webdriver.chrome.whitelistedIps", "");
+    System.setProperty("webdriver.chrome.whitelistedIps", "");
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
     options.addArguments("--verbose");
-    //options.addArguments("--disable-gpu");
-    options.setBinary("/usr/bin/chromedriver");
+    options.addArguments("--disable-gpu");
+    options.addArguments("--ignore-certificate-errors");
+    options.addArguments("--allow-running-insecure-content");
+    options.addArguments("--allow-insecure-localhost");
+    options.addArguments("--disable-web-security");
     //options.setBinary("/usr/bin/google-chrome");
     //options.addArguments("--headless", "--window-size=1920,1200");
     options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -42,6 +45,7 @@ public class DriverConfig {
     options.addArguments("--disable-dev-shm-usage");
     //WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
+    options.setBinary("/usr/bin/chromedriver");
     driver = new ChromeDriver(service, options);
     //driver.get("https://www.google.com/");
     //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
