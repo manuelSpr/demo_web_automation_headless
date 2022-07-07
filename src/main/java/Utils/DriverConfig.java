@@ -1,15 +1,9 @@
 package Utils;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.openqa.selenium.WebDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.sql.SQLOutput;
 
 public class DriverConfig {
 
