@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -15,14 +16,17 @@ public class DriverConfig {
   public static WebDriver driver;
   //public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
-  public static void setDriver(){
+  public static void setDriver() throws InterruptedException {
     System.out.println("hola");
+    ChromeDriverService service = new ChromeDriverService.Builder()
+        .usingPort(64185)
+        .build();
     //WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
     //driver = new WebDriverManager.chromedriver().browserInDocker();
     //driver = wdm.create();
     //System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-    System.setProperty("webdriver.chrome.whitelistedIps", "");
+    //System.setProperty("webdriver.chrome.whitelistedIps", "");
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
@@ -37,10 +41,12 @@ public class DriverConfig {
     options.addArguments("--disable-dev-shm-usage");
     //WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
-    driver = new ChromeDriver(options);
+    driver = new ChromeDriver(service, options);
     //driver.get("https://www.google.com/");
     //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
+    Thread.sleep(5000);
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+    Thread.sleep(5000);
     //assertThat(driver.getTitle()).contains("Selenium WebDriver");
     //return driver;
   }
