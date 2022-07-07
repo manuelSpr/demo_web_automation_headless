@@ -30,6 +30,7 @@ public class DriverConfig {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
+    options.addArguments("--verbose");
     //options.addArguments("--disable-gpu");
     options.setBinary("/usr/bin/chromedriver");
     //options.setBinary("/usr/bin/google-chrome");
