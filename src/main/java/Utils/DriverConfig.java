@@ -35,7 +35,7 @@ public class DriverConfig {
     //options.setHeadless(true);
     //options.addArguments("--disable-extensions");
     options.addArguments("--disable-dev-shm-usage");
-    WebDriverManager.chromedriver().browserInDocker();
+    //WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
     driver = new ChromeDriver(options);
     //driver.get("https://www.google.com/");
