@@ -1,38 +1,32 @@
 package CountryTest;
 
-import PageObject.InitialPage;
-import PageObject.ResultPage;
-import Utils.DriverConfig;
-import Utils.SysUtil;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
-public class MexicoTest extends DriverConfig {
+import io.github.bonigarcia.wdm.WebDriverManager;
 
-  /*@BeforeClass(alwaysRun = true)
-  public void beforeC() {
-    setDriver();
-  }
-*/
+class MexicoTest {
 
-  @Test()
-  public void mexicoCountryTest() throws InterruptedException {
-    System.out.println("Mexico");
-    setDriver();
-    //assertThat(driver.getTitle()).contains("Selenium WebDriver");
-    /*InitialPage initialPage = new InitialPage(driver);
-    initialPage.setShared("Mexico");
-    String nameFile = "test" + "Mexico";
-    ResultPage resultPage = new ResultPage(driver);
-    resultPage.waitPageLoad();
-    Thread.sleep(10);
-    SysUtil sysUtil = new SysUtil();
-    sysUtil.addScreenshot("Test_Mexico", driver);
-    Assert.assertTrue(resultPage.getDescription("País en América del Norte"));*/
-    //driver.quit();
+  WebDriver driver;
+  WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
+
+  @BeforeEach
+  void setupTest() {
+    driver = wdm.create();
   }
 
+  @AfterEach
+  void teardown() {
+    wdm.quit();
+  }
+
+  @Test
+  void test() {
+    driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+    assertThat(driver.getTitle()).contains("Successful Test");
+  }
 }

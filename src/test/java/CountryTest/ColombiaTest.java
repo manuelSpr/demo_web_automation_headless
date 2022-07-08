@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-class DockerChromeTest {
+class ColombiaTest {
 
   WebDriver driver;
   WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
@@ -27,6 +27,6 @@ class DockerChromeTest {
   @Test
   void test() {
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
-    assertThat(driver.getTitle()).contains("Selenium WebDriver");
+    assertThat(driver.getTitle()).contains("Failed Test");
   }
 }
