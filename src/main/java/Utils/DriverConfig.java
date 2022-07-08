@@ -14,7 +14,7 @@ import java.sql.SQLOutput;
 public class DriverConfig {
 
   public static WebDriver driver;
-  //public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
+  public static WebDriverManager wdm = WebDriverManager.chromedriver()
 
   public static void setDriver() throws InterruptedException {
     System.out.println("hola");
@@ -28,10 +28,11 @@ public class DriverConfig {
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     //System.setProperty("webdriver.chrome.whitelistedIps", "");
     ChromeOptions options = new ChromeOptions();
+    options.setHeadless(true);
     options.addArguments("--no-sandbox");
-    options.addArguments("--headless");
+    //options.addArguments("--headless");
     options.addArguments("--verbose");
-    options.addArguments("--disable-gpu");
+    //options.addArguments("--disable-gpu");
     options.addArguments("--ignore-certificate-errors");
     options.addArguments("--allow-running-insecure-content");
     options.addArguments("--allow-insecure-localhost");
