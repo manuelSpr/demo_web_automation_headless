@@ -1,34 +1,32 @@
 package CountryTest;
 
-import PageObject.InitialPage;
-import PageObject.ResultPage;
-import Utils.DriverConfig;
-import Utils.SysUtil;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class ColombiaTest extends DriverConfig {
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
-  /* @BeforeClass(alwaysRun = true)
-  public void beforeC() {
-    setDriver();
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class DockerChromeTest {
+
+  WebDriver driver;
+  WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
+
+  @BeforeEach
+  void setupTest() {
+    driver = wdm.create();
   }
-  */
-  @Test()
-  public void colombiaCountryTest() throws InterruptedException {
-    System.out.println("Colombia");
-    setDriver();
-  }
-    /*InitialPage initialPage = new InitialPage(driver);
-    initialPage.setShared("Colombia");
-    String nameFile = "test" + "Colombia";
-    ResultPage resultPage = new ResultPage(driver);
-    resultPage.waitPageLoad();
-    Thread.sleep(10);
-    SysUtil sysUtil = new SysUtil();
-    sysUtil.addScreenshot("Test_Colombia", driver);
 
-    //driver.quit();
-*/
+  @AfterEach
+  void teardown() {
+    wdm.quit();
+  }
+
+  @Test
+  void test() {
+    driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
+    assertThat(driver.getTitle()).contains("Selenium WebDriver");
+  }
 }
