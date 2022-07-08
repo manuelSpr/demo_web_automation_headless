@@ -14,7 +14,7 @@ import java.sql.SQLOutput;
 public class DriverConfig {
 
   public static WebDriver driver;
-  public static WebDriverManager wdm = WebDriverManager.chromedriver()
+  public static WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker();
 
   public static void setDriver() throws InterruptedException {
     System.out.println("hola");
