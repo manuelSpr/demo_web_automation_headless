@@ -48,7 +48,7 @@ public class DriverConfig {
     //options.addArguments("--disable-dev-shm-usage");
     //WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
-    //options.setBinary("/usr/bin/chromedriver");
+    options.setBinary("/bin/chromedriver");
     //driver = new ChromeDriver(service, options);
     //driver.get("https://www.google.com/");
     //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
