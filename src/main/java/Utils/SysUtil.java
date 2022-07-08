@@ -23,7 +23,7 @@ public class SysUtil {
    */
   public void waitElement(WebDriver driver, By element){
     Duration fromSeconds = Duration.ofSeconds(10);
-    WebDriverWait wait = new WebDriverWait(driver, fromSeconds);
+    WebDriverWait wait = new WebDriverWait(driver, 10);
     wait.until(ExpectedConditions.visibilityOfElementLocated(element));
   }
 
