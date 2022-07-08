@@ -53,7 +53,7 @@ public class DriverConfig {
     //driver.get("https://www.google.com/");
     //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
     driver = new ChromeDriver(options);
-    Thread.sleep(5000);
+    //Thread.sleep(5000);
     driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
     Thread.sleep(5000);
     //assertThat(driver.getTitle()).contains("Selenium WebDriver");
