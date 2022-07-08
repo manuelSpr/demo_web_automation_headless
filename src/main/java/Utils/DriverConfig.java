@@ -26,7 +26,7 @@ public class DriverConfig {
     //driver = wdm.create();
     //System.out.println("hola a todos");
     //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-    System.setProperty("webdriver.chrome.whitelistedIps", "");
+    //System.setProperty("webdriver.chrome.whitelistedIps", "");
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--headless");
@@ -43,9 +43,9 @@ public class DriverConfig {
     //options.setHeadless(true);
     //options.addArguments("--disable-extensions");
     options.addArguments("--disable-dev-shm-usage");
-    //WebDriverManager.chromedriver().browserInDocker();
+    WebDriverManager.chromedriver().browserInDocker();
     //driver = WebDriver.Chrome("/usr/lib/chromium");
-    options.setBinary("/usr/bin/chromedriver");
+    //options.setBinary("/usr/bin/chromedriver");
     driver = new ChromeDriver(service, options);
     //driver.get("https://www.google.com/");
     //wdm.getWebDriver().get("https://bonigarcia.dev/selenium-webdriver-java/");
